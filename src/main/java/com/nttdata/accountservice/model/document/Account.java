@@ -8,6 +8,9 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import reactor.core.publisher.Flux;
 
+/**
+ * Class for Account.
+ */
 @Getter
 @Setter
 @AllArgsConstructor
@@ -15,14 +18,14 @@ import reactor.core.publisher.Flux;
 @Document(collection = "accounts")
 public class Account {
 
-    @Id
-    private String accountId;
+  @Id
+  private String accountId;
 
-    private String clientId;
-    private String typeAccount;
-    private String maintenance;
-    private String monthlyMovementLimit;
-    private String dateMovement;
-    private Flux<Transaction> transactions;
+  private String clientId;
+  private String typeAccount;
+  private String maintenance;
+  private String monthlyMovementLimit;
+  private String dateMovement;
+  private Flux<Transaction> transactions;
 
 }
